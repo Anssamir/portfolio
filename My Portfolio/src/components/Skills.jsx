@@ -5,8 +5,8 @@ export function Skills() {
 
   return (
     <section className="skills section">
+      <div className="eyebrow">The Magic I Create</div>
       <div>
-        <div className="eyebrow">The Magic I Create</div>
         <h2>My Superpowers</h2>
         <p>
           From crafting seamless digital journeys to shaping brands that stick, these are the

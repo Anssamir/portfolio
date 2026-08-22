@@ -5,11 +5,11 @@ import { assets } from '../data/assets.js';
 export function AboutPreview() {
   return (
     <section className="about-preview section">
+      <div className="eyebrow">About Me</div>
       <div className="photo-frame reveal">
         <img src={assets.portrait} alt="Himesh Mehta" />
       </div>
       <div className="reveal">
-        <div className="eyebrow">About Me</div>
         <h2>
           Himesh Mehta,
           <br />

@@ -10,8 +10,8 @@ export function About() {
   return (
     <main ref={ref}>
       <section className="about-hero section">
+        <div className="eyebrow">About Me</div>
         <div>
-          <div className="eyebrow">About Me</div>
           <h1>
             Himesh Mehta,
             <br />
@@ -41,9 +41,9 @@ export function About() {
       </section>
 
       <section className="about-block section">
+        <div className="eyebrow">Designer BTS</div>
         <img src={assets.about} alt="Designer Behind The Scenes" />
         <div>
-          <div className="eyebrow">Designer BTS</div>
           <h2>My Shutterbug mode</h2>
           <p>
             When I’m not designing, I’m behind the lens capturing moments that tell a story. Here’s a
@@ -54,8 +54,8 @@ export function About() {
       </section>
 
       <section className="about-block section reverse">
+        <div className="eyebrow">Chef of UX & Spices</div>
         <div>
-          <div className="eyebrow">Chef of UX & Spices</div>
           <h2>Lowkey a Chef</h2>
           <p>
             Cooking is my creative escape — it’s where I blend flavors like I combine user needs with

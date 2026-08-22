@@ -45,7 +45,7 @@ body {
   opacity: 0;
   pointer-events: none;
   will-change: transform;
-  transition: opacity 160ms ease-out;
+  transition: opacity 2000ms ease-out;
 }
 
 .custom-cursor.is-visible {
@@ -141,6 +141,45 @@ a {
   isolation: isolate;
 }
 
+.hero-scroll {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 6px;
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  border: 1px solid #0b1d3838;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: scrollHint 2.8s ease-in-out infinite;
+  transition: background-color .25s ease, border-color .25s ease;
+}
+
+.hero-scroll svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.hero-scroll:hover,
+.hero-scroll:focus-visible {
+  background: var(--lime);
+  border-color: var(--ink);
+}
+
+.hero-scroll:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -160,7 +199,7 @@ a {
   max-width: 900px;
   margin: 25px auto 18px;
   font-size: 46px;
-  line-height: 1.25;
+  line-height: 1;
   letter-spacing: 0px;
   position: relative;
   z-index: 1;
@@ -182,7 +221,7 @@ a {
 .hero p {
   color: #8c8c8c;
   font-size: 24px;
-  margin: 0 0 40px;
+  margin: 0 0 px;
 }
 
 .hero p b {
@@ -374,19 +413,66 @@ a {
   margin: 80px auto 0;
   padding: 36px 0;
   display: flex;
-  justify-content: space-between;
+  gap: 28px;
   align-items: center;
   color: #222;
-  font-size: 17px;
+  font-size: 24px;
+  font-weight: 600;
   position: relative;
   z-index: 2;
   opacity: 0;
   animation: heroFade .6s 1.35s ease forwards;
 }
 
+.brands-label {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  padding-right: 18px;
+  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 82%, transparent 100%);
+}
+
+.brands-marquee {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.brands-marquee::before,
+.brands-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 88px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.brands-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 28%, rgba(252, 252, 250, 0) 100%);
+}
+
+.brands-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--paper) 0%, rgba(252, 252, 250, .92) 18%, rgba(252, 252, 250, 0) 100%);
+}
+
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  will-change: transform;
+  animation: brandsTicker 10s linear infinite;
+}
+
 .brands b {
-  font-size: 20px;
+  font-size: 28px;
   color: #999;
+  white-space: nowrap;
 }
 
 /* =============================================================================
@@ -400,11 +486,41 @@ a {
 }
 
 .eyebrow {
-  font: 11px 'DM Mono', monospace;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #576173;
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 15px;
+  padding: 7px 16px 7px 12px;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font: 500 13px/1.2 Manrope, sans-serif;
+  letter-spacing: 0;
+}
+
+.about-preview>.eyebrow,
+.skills>.eyebrow,
+.about-hero>.eyebrow,
+.about-block>.eyebrow,
+.contact>.eyebrow,
+.case-body article>.eyebrow {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.eyebrow::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 0 2.5px var(--lime),
+    0 0 7px 1px color-mix(in srgb, var(--lime) 85%, transparent);
 }
 
 /* =============================================================================
@@ -569,10 +685,6 @@ a {
   max-width: none;
   padding-left: max(32px, calc((100% - 1056px) / 2));
   padding-right: max(32px, calc((100% - 1056px) / 2));
-}
-
-.process .eyebrow {
-  color: #c3d2e8;
 }
 
 .process>p {
@@ -985,17 +1097,19 @@ button {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   padding: 120px max(32px, calc((100% - 1056px) / 2));
   color: #fff;
 }
 
-.case-hero>div {
-  max-width: 700px;
+.case-hero>.eyebrow {
+  align-self: center;
 }
 
-.case-hero .eyebrow {
-  color: #fff;
+.case-hero>div:not(.eyebrow) {
+  max-width: 700px;
 }
 
 .case-hero small {
@@ -1089,10 +1203,6 @@ button {
 .case-dark {
   background: #172744;
   color: #fff;
-}
-
-.case-dark .eyebrow {
-  color: #d5e5ff;
 }
 
 .case-dark p {
@@ -1357,6 +1467,30 @@ button {
   }
 }
 
+@keyframes scrollHint {
+
+  0%,
+  100% {
+    opacity: .72;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+  }
+}
+
+@keyframes brandsTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 28px));
+  }
+}
+
 @keyframes portraitPop {
   to {
     opacity: 1;
@@ -1429,8 +1563,28 @@ button {
     margin-top: 60px;
     gap: 14px;
     flex-wrap: wrap;
-    justify-content: center;
     font-size: 13px;
+  }
+
+  .brands-label,
+  .brands-marquee {
+    width: 100%;
+  }
+
+  .brands-label {
+    padding-right: 0;
+    background: none;
+    text-align: center;
+  }
+
+  .brands-marquee::before,
+  .brands-marquee::after {
+    width: 52px;
+  }
+
+  .brands-track {
+    gap: 32px;
+    animation-duration: 16s;
   }
 
   .brands b {
@@ -1619,6 +1773,29 @@ button {
   }
 }
 
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+
+  .hero-line:first-child {
+    white-space: nowrap;
+  }
+
+  .hero h1 .hero-badge {
+    bottom: .4em;
+    width: 32px;
+    height: 56px;
+    margin: 0 .1em;
+  }
+
+  .brands-track {
+    gap: 24px;
+    animation-duration: 14s;
+  }
+}
+
 /* =============================================================================
    ACCESSIBILITY PREFERENCES (REDUCED MOTION)
    ============================================================================= */
@@ -1630,9 +1807,14 @@ button {
   .hero-badge,
   .hero-intro,
   .hero-cta,
-  .brands {
+  .brands,
+  .brands-track,
+  .hero-scroll {
     animation: none !important;
     opacity: 1 !important;
-    transform: none !important;
+  }
+
+  .hero-scroll {
+    transform: translateX(-50%) !important;
   }
 }

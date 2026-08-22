@@ -5,8 +5,8 @@ export function Contact() {
   return (
     <main>
       <section className="contact section">
+        <div className="eyebrow">Available To Work</div>
         <div>
-          <div className="eyebrow">Available To Work</div>
           <h1>Himesh Mehta</h1>
           <h3>Product Designer</h3>
 

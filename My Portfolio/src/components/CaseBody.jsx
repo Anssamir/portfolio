@@ -71,8 +71,8 @@ export function CaseBody({ p, slug }) {
     <section className="case-body">
       {sections.map((s, i) => (
         <article className={i % 2 ? 'case-dark' : 'case-light'} key={s[0]}>
+          <div className="eyebrow">{s[0]}</div>
           <div>
-            <div className="eyebrow">{s[0]}</div>
             <h2>{s[1]}</h2>
             <p>{s[2]}</p>
           </div>

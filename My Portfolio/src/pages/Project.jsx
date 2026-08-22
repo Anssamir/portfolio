@@ -39,8 +39,8 @@ export function Project({ slug }) {
           backgroundImage: `linear-gradient(90deg, rgba(8,22,41,.7), rgba(8,22,41,.15)), url(${p.image})`,
         }}
       >
+        <div className="eyebrow">DISCOVER PROJECT</div>
         <div>
-          <div className="eyebrow">DISCOVER PROJECT</div>
           <small>UX CASE STUDY</small>
           <h1>{p.title}</h1>
           <h2>{intro}</h2>

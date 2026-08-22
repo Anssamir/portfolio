@@ -47,16 +47,30 @@ export function Home() {
         </div>
 
         <div className="brands">
-          <span>Brands I've Designed For</span>
-          <b>Danske Bank</b>
-          <b>L’ORÉAL</b>
-          <b>LAUSD</b>
-          <b>Sysco</b>
+          <span className="brands-label">Brands I've Designed For</span>
+          <div className="brands-marquee" aria-label="Brands I've Designed For">
+            <div className="brands-track">
+              <b>House of Stox</b>
+              <b>L’ORÉAL</b>
+              <b>Dev Entity</b>
+              <b>Patronus AI</b>
+              <b>House of Stox</b>
+              <b>L’ORÉAL</b>
+              <b>Dev Entity</b>
+              <b>Patronus AI</b>
+            </div>
+          </div>
         </div>
+
+        <a className="hero-scroll" href="#featured-work" aria-label="Scroll to featured work">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 4v14M6.5 12.5 12 18l5.5-5.5" />
+          </svg>
+        </a>
       </section>
 
       {/* Featured Work Section */}
-      <section className="section featured">
+      <section id="featured-work" className="section featured">
         <div className="eyebrow">Featured Work</div>
         <h2>Like food, great design is invisible when it works perfectly.</h2>
         <div className="project-list">
