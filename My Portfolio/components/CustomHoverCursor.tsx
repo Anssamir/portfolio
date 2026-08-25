@@ -11,10 +11,15 @@ export function CustomHoverCursor() {
   const isHome = pathname === '/';
   const target = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
+  const hasMoved = useRef(false);
 
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
+
+    setVisible(false);
+    hasMoved.current = false;
+    document.documentElement.classList.remove('hover-active');
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let frameId: number;
@@ -30,19 +35,24 @@ export function CustomHoverCursor() {
     const onMove = (e: PointerEvent) => {
       target.current.x = e.clientX;
       target.current.y = e.clientY;
+      if (!hasMoved.current) {
+        current.current.x = e.clientX;
+        current.current.y = e.clientY;
+        hasMoved.current = true;
+      }
     };
 
     const onEnter = (e: Event) => {
-      const target_ = e.target as HTMLElement;
-      if (target_?.closest?.('.project-card')) {
+      const el = e.target as HTMLElement;
+      if (el?.closest?.('.project-card')) {
         setVisible(true);
         document.documentElement.classList.add('hover-active');
       }
     };
 
     const onLeave = (e: Event) => {
-      const target_ = e.target as HTMLElement;
-      if (target_?.closest?.('.project-card')) {
+      const el = e.target as HTMLElement;
+      if (el?.closest?.('.project-card')) {
         setVisible(false);
         document.documentElement.classList.remove('hover-active');
       }
@@ -60,7 +70,7 @@ export function CustomHoverCursor() {
       cancelAnimationFrame(frameId);
       document.documentElement.classList.remove('hover-active');
     };
-  }, []);
+  }, [pathname]);
 
   if (!isHome) return null;
 
