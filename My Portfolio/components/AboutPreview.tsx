@@ -7,15 +7,23 @@ import { assets } from '@/data/assets';
 export function AboutPreview() {
   return (
     <section className="about-preview section">
-      <div className="eyebrow">About Me</div>
-      <div className="photo-frame reveal">
-        <Image src={assets.portrait} alt="Himesh Mehta" width={360} height={440} style={{ objectFit: 'cover', objectPosition: '50% 0' }} />
+      <div className="about-preview-header">
+        <div className="eyebrow">About Me</div>
+        <h2 className="about-preview-heading reveal">I care deeply about how things feel, <br /> not just how they look.</h2>
       </div>
-      <div className="reveal">
-        <h2>Himesh Mehta,<br />Your Designer</h2>
-        <strong>Product Designer since 3+ Years</strong>
-        <p>I&apos;m a Product Designer with 3+ years of experience at Wong Doody, where I specialize in creating seamless, user-centered designs.</p>
-        <Link className="text-link" href="/about-me">More About Me &#x2197;</Link>
+      <div className="about-preview-photo reveal">
+        <Image src={assets.aboutImage} alt="Himesh Mehta" fill sizes="440px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+      </div>
+      <div className="about-preview-content reveal">
+        <div className="about-preview-content-body">
+          <p>I&apos;m Anas Amir a Product designer and developer with <strong>3+ years of experience ,</strong> and someone who’s genuinely curious about how people, products, and ideas come together.</p>
+          <p>I enjoy taking messy problems, asking the right questions, and turning them into experiences that feel simple and intuitive. I care about the details, but even more about whether 
+            the end result is useful, purposeful, and genuinely solves the problem it was meant to solve.</p>
+          <p>Outside of design, I love traveling, going on long tours, exploring new places, and trying different kinds of food. I’m always drawn to new experiences and unfamiliar surroundings 
+            they keep me curious, open-minded, and constantly inspired.</p>
+        </div>
+        <p className="about-preview-quote reveal">Curious by nature. Thoughtful by design.</p>
+        <Link className="about-work-btn" href="/contact">Let&apos;s Work Together</Link>
       </div>
     </section>
   );
