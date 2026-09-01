@@ -9,6 +9,12 @@ export const metadata = {
   description: 'Portfolio of Himesh Mehta, Product & UX Designer specializing in intuitive digital experiences.',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
