@@ -570,8 +570,7 @@ html.hover-active .custom-cursor {
 }
 
 .project-card {
-  width: 100%;
-  max-width: 688px;
+  width: 688px;
   height: 680px;
   display: block;
   border-radius: 20px;
