@@ -1878,7 +1878,7 @@ button {
   .about-preview-content-body p { font-size: 15px; line-height: 1.6; }
   .about-preview-quote { font-size: 16px; }
   .about-preview-content .about-work-btn { width: 100%; text-align: center; }
-  .process-cards { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .process-cards { flex-wrap: wrap; justify-content: center; gap: 16px; height: auto; }
   .offset { margin-top: 0; }
   .process-card-inner { width: 260px; height: 170px; }
   .process-card-content { padding: 22px 20px; }
@@ -1938,8 +1938,8 @@ button {
   .about-preview-photo { height: 380px; }
   .brands-track { gap: 28px; animation-duration: 14s; }
   .footer-copy p { font-size: 28px; letter-spacing: -1.5px; }
-  .process-cards { flex-direction: column; align-items: center; }
-  .process-card-inner { width: 100%; max-width: 280px; height: 180px; }
+  .process-cards { flex-direction: column; align-items: center; height: auto; gap: 16px; }
+  .process-card-inner { width: 100%; max-width: 280px; height: auto; }
   .process-card-title { font-size: 20px; }
   .process-card-num { font-size: 22px; }
   .process-card-desc { font-size: 13px; }
@@ -1949,7 +1949,7 @@ button {
   .statement p { font-size: 22px; }
   .case-hero h1 { font-size: 32px; }
   .marketly h1 { font-size: 36px; }
-  .hero-content { padding-top: 40px; }
+  .hero-content { padding-top: 0px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
