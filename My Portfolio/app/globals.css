@@ -690,8 +690,7 @@ html.hover-active .custom-cursor {
 
 .about-preview-photo {
   position: relative;
-  width: 100%;
-  max-width: 512px;
+  width: 512px;
   height: 520px;
   overflow: hidden;
   justify-self: center;
