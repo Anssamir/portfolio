@@ -982,7 +982,7 @@ html.hover-active .custom-cursor {
 }
 
 .sp-card {
-  background: var(--sp-card, #c9ec7a);
+  background: var(--sp-card, #dcffa2);
   border-radius: 28px;
   padding: 40px;
   color: var(--ink);
