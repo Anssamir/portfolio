@@ -1,8 +1,8 @@
 import { WorkContent } from './WorkContent';
 
 export const metadata = {
-  title: 'Work — Himesh Mehta',
-  description: 'Featured work and case studies by Himesh Mehta, Product Designer.',
+  title: 'Work — Anas Amir',
+  description: 'Featured work and case studies by Anas Amir, Product Designer.',
 };
 
 export default function Work() {

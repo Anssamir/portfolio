@@ -1,8 +1,8 @@
 import { Footer } from '@/components/Footer';
 
 export const metadata = {
-  title: 'Resume — Himesh Mehta',
-  description: 'Experience and education of Himesh Mehta, Product Designer.',
+  title: 'Resume — Anas Amir',
+  description: 'Experience and education of Anas Amir, Product Designer.',
 };
 
 const experiences = [

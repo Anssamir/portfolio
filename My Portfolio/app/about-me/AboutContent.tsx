@@ -16,7 +16,7 @@ export function AboutContent() {
         <div className="eyebrow">About Me</div>
         <div className="about-hero-content">
           <div className="about-card about-card-head">
-            <h1>Himesh Mehta</h1>
+            <h1>Anas Amir</h1>
             <strong>Product Designer since <b>4+ Years</b></strong>
           </div>
           <div className="about-card about-card-body">
@@ -27,7 +27,7 @@ export function AboutContent() {
           </div>
         </div>
         <div className="about-hero-photo reveal">
-          <Image src={assets.portrait} alt="Himesh Mehta" fill sizes="550px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+          <Image src={assets.portrait} alt="Anas Amir" fill sizes="550px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
         </div>
       </section>
 

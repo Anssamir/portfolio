@@ -1,8 +1,8 @@
 import { Footer } from '@/components/Footer';
 
 export const metadata = {
-  title: 'Contact — Himesh Mehta',
-  description: 'Get in touch with Himesh Mehta for Product Design work.',
+  title: 'Contact — Anas Amir',
+  description: 'Get in touch with Anas Amir for Product Design work.',
 };
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
       <section className="contact section">
         <div className="eyebrow">Available To Work</div>
         <div>
-          <h1>Himesh Mehta</h1>
+          <h1>Anas Amir</h1>
           <h3>Product Designer</h3>
           <div className="contact-info">
             <p><small>Working Hours (IST)</small>8am to 6pm</p>

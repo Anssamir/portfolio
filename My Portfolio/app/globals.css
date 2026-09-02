@@ -1054,7 +1054,7 @@ html.hover-active .custom-cursor {
   padding-top: 20px;
   border-top: 1px solid #526078;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
@@ -1880,7 +1880,7 @@ button {
   .about-preview-content .about-work-btn { width: 100%; text-align: center; }
   .process-cards { flex-wrap: wrap; justify-content: center; gap: 16px; height: auto; }
   .offset { margin-top: 0; }
-  .process-card-inner { width: 260px; height: 170px; }
+  .process-card-inner { width: 100%; max-width: 300px; height: auto; }
   .process-card-content { padding: 22px 20px; }
   .process-card-title { font-size: 24px; line-height: 1.3; }
   .process-banner { flex-direction: column; gap: 16px; border-radius: 20px; text-align: center; }
@@ -1939,7 +1939,7 @@ button {
   .brands-track { gap: 28px; animation-duration: 14s; }
   .footer-copy p { font-size: 28px; letter-spacing: -1.5px; }
   .process-cards { flex-direction: column; align-items: center; height: auto; gap: 16px; }
-  .process-card-inner { width: 100%; max-width: 280px; height: auto; }
+  .process-card-inner { width: 100%; max-width: 320px; height: auto; }
   .process-card-title { font-size: 20px; }
   .process-card-num { font-size: 22px; }
   .process-card-desc { font-size: 13px; }
