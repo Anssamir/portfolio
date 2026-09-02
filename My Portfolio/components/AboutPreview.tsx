@@ -12,7 +12,7 @@ export function AboutPreview() {
         <h2 className="about-preview-heading reveal">I care deeply about how things feel, <br /> not just how they look.</h2>
       </div>
       <div className="about-preview-photo reveal">
-        <Image src={assets.aboutImage} alt="Himesh Mehta" fill sizes="440px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+        <Image src={assets.aboutImage} alt="Anas Amir" fill sizes="440px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
       </div>
       <div className="about-preview-content reveal">
         <div className="about-preview-content-body">

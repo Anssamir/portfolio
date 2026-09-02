@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Himesh Mehta — Product Designer Portfolio',
-  description: 'Portfolio of Himesh Mehta, Product & UX Designer specializing in intuitive digital experiences.',
+  title: 'Anas Amir — Product Designer Portfolio',
+  description: 'Portfolio of Anas Amir, Product & UX Designer specializing in intuitive digital experiences.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
