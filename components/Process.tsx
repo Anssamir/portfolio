@@ -87,12 +87,8 @@ export function Process() {
       </div>
       <div className="process-banner">
         <div className="process-banner-text">
-          <span className="process-banner-emoji">&#x1F60A;</span>
-          <div>
-            <strong>I am with you in every step</strong>
-            <br />
-            <small>alongside you at each step for seamless experience</small>
-          </div>
+          <strong>I am with you in every step</strong>
+          <small>alongside you at each step for seamless experience</small>
         </div>
         <CTA showDoodle={false} />
       </div>

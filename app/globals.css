@@ -927,13 +927,9 @@ html.hover-active .custom-cursor {
 
 .process-banner-text {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.process-banner-emoji {
-  font-size: 28px;
-  line-height: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .process-banner small {
@@ -2026,7 +2022,7 @@ button {
   .process-card-content { padding: 22px 20px; }
   .process-card-title { font-size: 24px; line-height: 1.3; }
   .process-banner { flex-direction: column; gap: 16px; border-radius: 20px; text-align: center; }
-  .process-banner-text { justify-content: center; }
+  .process-banner-text { align-items: flex-start; }
   .skills-head { margin-bottom: 36px; }
   .sp-grid { grid-template-columns: 1fr; gap: 16px; }
   .sp-col { gap: 16px; }
